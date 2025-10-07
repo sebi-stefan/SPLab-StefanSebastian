@@ -1,6 +1,7 @@
 package org.example.splabstefansebastian;
 
 import org.example.splabstefansebastian.model.*;
+import org.example.splabstefansebastian.model.elements.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -16,22 +17,24 @@ public class SpLabStefanSebastianApplication {
 	}
 
 	private static void run(){
-		Table table = new Table("table");
-		Image image = new Image("image");
-		Paragraph paragraph = new Paragraph("text");
-		List<SubChapter> subChapters = new ArrayList<>(List.of(
-				new SubChapter("subChapter1", List.of(table), List.of(image), List.of(paragraph)),
-				new SubChapter("subChapter2", List.of(table), List.of(image), List.of(paragraph)),
-				new SubChapter("subChapter3", List.of(table), List.of(image), List.of(paragraph))
-		));
+		Book book = new Book();
+		book.setTitle("Noapte buna, copii!");
+		book.setAuthors(new ArrayList<>(List.of(new Author("Radu Pavel Gheo"))));
 
-		List<Chapter> chapters = new ArrayList<>(List.of(
-				new Chapter("chapter1", new ArrayList<>(subChapters)),
-				new Chapter("chapter2", new ArrayList<>(subChapters)),
-				new Chapter("chapter3", new ArrayList<>(subChapters))
-		));
-		Book book = new Book(new TableOfContents(), chapters);
-		book.setAuthor(new Author("Vasile Alecsandri"));
+		Section cap1 = new Section("Capitolul 1");
+		Section cap11 = new Section("Capitolul 1.1");
+		Section cap111 = new Section("Capitolul 1.1.1");
+		Section cap1111 = new Section("Capitolul 1.1.1.1");
+		book.addContent(new Paragraph("Multumesc celor care ..."));
+		book.addContent(cap1);
+		cap1.add(new Paragraph("Moto capitol"));
+		cap1.add(cap11);
+		cap11.add(new Paragraph("Text from subchapter 1.1"));
+		cap11.add(cap111);
+		cap111.add(new Paragraph("text from subchapter 1.1.1"));
+		cap111.add(cap1111);
+		cap1111.add(new Image("Image subchapter 1.1.1.1"));
+
 		System.out.println(book);
 	}
 
