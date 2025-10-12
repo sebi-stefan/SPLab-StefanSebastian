@@ -2,6 +2,10 @@ package org.example.splabstefansebastian;
 
 import org.example.splabstefansebastian.model.*;
 import org.example.splabstefansebastian.model.elements.*;
+import org.example.splabstefansebastian.model.elements.paragraph.AlignCenter;
+import org.example.splabstefansebastian.model.elements.paragraph.AlignLeft;
+import org.example.splabstefansebastian.model.elements.paragraph.AlignRight;
+import org.example.splabstefansebastian.model.elements.paragraph.Paragraph;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,30 +16,34 @@ import java.util.List;
 public class SpLabStefanSebastianApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpLabStefanSebastianApplication.class, args);
+//		SpringApplication.run(SpLabStefanSebastianApplication.class, args);
 		run();
 	}
 
 	private static void run(){
-		Book book = new Book();
-		book.setTitle("Noapte buna, copii!");
-		book.setAuthors(new ArrayList<>(List.of(new Author("Radu Pavel Gheo"))));
-
 		Section cap1 = new Section("Capitolul 1");
-		Section cap11 = new Section("Capitolul 1.1");
-		Section cap111 = new Section("Capitolul 1.1.1");
-		Section cap1111 = new Section("Capitolul 1.1.1.1");
-		book.addContent(new Paragraph("Multumesc celor care ..."));
-		book.addContent(cap1);
-		cap1.add(new Paragraph("Moto capitol"));
-		cap1.add(cap11);
-		cap11.add(new Paragraph("Text from subchapter 1.1"));
-		cap11.add(cap111);
-		cap111.add(new Paragraph("text from subchapter 1.1.1"));
-		cap111.add(cap1111);
-		cap1111.add(new Image("Image subchapter 1.1.1.1"));
+		Paragraph p1 = new Paragraph("Paragraph 1");
+		cap1.add(p1);
+		Paragraph p2 = new Paragraph("Paragraph 2");
+		cap1.add(p2);
+		Paragraph p3 = new Paragraph("Paragraph 3");
+		cap1.add(p3);
+		Paragraph p4 = new Paragraph("Paragraph 4");
+		cap1.add(p4);
 
-		System.out.println(book);
+		System.out.println("Printing without Alignment\n");
+		System.out.println(cap1);
+
+		p1.setAlignStrategy(new AlignCenter());
+		p2.setAlignStrategy(new AlignRight());
+		p3.setAlignStrategy(new AlignLeft());
+
+		System.out.println();
+		System.out.println("Printing with Alignment\n");
+
+		System.out.println(cap1);
+
+
 	}
 
 }
