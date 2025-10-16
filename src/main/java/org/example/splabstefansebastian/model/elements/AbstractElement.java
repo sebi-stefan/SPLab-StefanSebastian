@@ -1,6 +1,6 @@
 package org.example.splabstefansebastian.model.elements;
 
-public class AbstractElement implements Element{
+public abstract class AbstractElement implements Element{
     @Override
     public void add(Element element) {
         throw new UnsupportedOperationException("Unsupported operation!");
