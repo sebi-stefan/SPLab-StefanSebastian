@@ -20,24 +20,24 @@ import java.util.List;
 public class SpLabStefanSebastianApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context =
+//		ApplicationContext context =
 				SpringApplication.run(SpLabStefanSebastianApplication.class, args);
 
-		TransientComponent transientBean = context.getBean(TransientComponent.class);
-		transientBean.operation();
-		transientBean = context.getBean(TransientComponent.class);
-		transientBean.operation();
-
-		SingletonComponent singletonBean = context.getBean(SingletonComponent.class);
-		singletonBean.operation();
-		singletonBean = context.getBean(SingletonComponent.class);
-		singletonBean.operation();
-
-		ClientComponent c = context.getBean(ClientComponent.class);
-		c.operation();
-
-		c = (ClientComponent) context.getBean("clientComponent");
-		c.operation();
+//		TransientComponent transientBean = context.getBean(TransientComponent.class);
+//		transientBean.operation();
+//		transientBean = context.getBean(TransientComponent.class);
+//		transientBean.operation();
+//
+//		SingletonComponent singletonBean = context.getBean(SingletonComponent.class);
+//		singletonBean.operation();
+//		singletonBean = context.getBean(SingletonComponent.class);
+//		singletonBean.operation();
+//
+//		ClientComponent c = context.getBean(ClientComponent.class);
+//		c.operation();
+//
+//		c = (ClientComponent) context.getBean("clientComponent");
+//		c.operation();
 
 
 	}

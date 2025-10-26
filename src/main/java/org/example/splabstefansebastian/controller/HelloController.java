@@ -1,4 +1,4 @@
-package org.example.splabstefansebastian.controllers;
+package org.example.splabstefansebastian.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.splabstefansebastian.lab3components.ClientComponent;
