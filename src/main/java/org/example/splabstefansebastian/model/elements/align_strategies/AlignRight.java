@@ -1,6 +1,5 @@
-package org.example.splabstefansebastian.model.elements.paragraph;
+package org.example.splabstefansebastian.model.elements.align_strategies;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

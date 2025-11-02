@@ -38,7 +38,7 @@ public class BookController {
     }
 
     @GetMapping("/{bookId}")
-    public ResponseEntity<Book> getBookById(@PathVariable Integer bookId){
+    public ResponseEntity<Book> getBookById(@PathVariable Long bookId){
         Command<Book> getBookByIdCommand = new GetBookByIdCommand(bookService, bookId);
 
         return ResponseEntity.ok(syncExecutor.executeCommand(getBookByIdCommand));
@@ -53,7 +53,7 @@ public class BookController {
     }
 
     @PutMapping("/{bookId}")
-    public ResponseEntity<Book> modifyBook(@RequestBody Book book, @PathVariable Integer bookId){
+    public ResponseEntity<Book> modifyBook(@RequestBody Book book, @PathVariable Long bookId){
         Command<Book> modifyBookCommand = new ModifyBookCommand(bookService, book, bookId);
 
         return ResponseEntity
@@ -62,7 +62,7 @@ public class BookController {
     }
 
     @DeleteMapping("/{bookId}")
-    public ResponseEntity<?> deleteBook(@PathVariable Integer bookId){
+    public ResponseEntity<?> deleteBook(@PathVariable Long bookId){
         Command<Void> deleteBookCommand = new DeleteBookCommand(bookService, bookId);
         syncExecutor.executeCommand(deleteBookCommand);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();

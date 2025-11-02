@@ -1,20 +1,7 @@
 package org.example.splabstefansebastian;
 
-import org.example.splabstefansebastian.lab3components.ClientComponent;
-import org.example.splabstefansebastian.lab3components.SingletonComponent;
-import org.example.splabstefansebastian.lab3components.TransientComponent;
-import org.example.splabstefansebastian.model.*;
-import org.example.splabstefansebastian.model.elements.*;
-import org.example.splabstefansebastian.model.elements.paragraph.AlignCenter;
-import org.example.splabstefansebastian.model.elements.paragraph.AlignLeft;
-import org.example.splabstefansebastian.model.elements.paragraph.AlignRight;
-import org.example.splabstefansebastian.model.elements.paragraph.Paragraph;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 public class SpLabStefanSebastianApplication {

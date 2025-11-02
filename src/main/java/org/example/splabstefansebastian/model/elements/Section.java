@@ -1,16 +1,23 @@
 package org.example.splabstefansebastian.model.elements;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Section extends AbstractElement {
+@Entity
+@NoArgsConstructor
+public class Section extends BaseElement {
 
     private String title;
+
+    @OneToMany(targetEntity = BaseElement.class)
     private List<Element> elements;
 
     public Section(String title, List<Element> elements){

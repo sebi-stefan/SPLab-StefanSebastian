@@ -1,10 +1,14 @@
 package org.example.splabstefansebastian.model.elements;
 
+import jakarta.persistence.Entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class TableOfContents extends AbstractElement{
+@Entity
+@NoArgsConstructor
+public class TableOfContents extends BaseElement{
 
 }
