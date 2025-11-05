@@ -7,9 +7,9 @@ import org.example.splabstefansebastian.service.BookService;
 public class ModifyBookCommand extends AbstractCommand<Book> {
 
     private Book bookToModify;
-    private Integer bookId;
+    private Long bookId;
 
-    public ModifyBookCommand(BookService bookService, Book bookToModify, Integer bookId) {
+    public ModifyBookCommand(BookService bookService, Book bookToModify, Long bookId) {
         super(bookService);
         this.bookToModify = bookToModify;
         this.bookId = bookId;

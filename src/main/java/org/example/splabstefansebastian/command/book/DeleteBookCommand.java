@@ -5,9 +5,9 @@ import org.example.splabstefansebastian.service.BookService;
 
 public class DeleteBookCommand extends AbstractCommand<Void> {
 
-    private Integer bookId;
+    private Long bookId;
 
-    public DeleteBookCommand(BookService bookService, Integer bookId) {
+    public DeleteBookCommand(BookService bookService, Long bookId) {
         super(bookService);
         this.bookId = bookId;
     }

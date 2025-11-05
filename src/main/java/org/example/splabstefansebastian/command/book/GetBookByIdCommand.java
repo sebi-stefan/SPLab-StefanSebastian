@@ -6,9 +6,9 @@ import org.example.splabstefansebastian.service.BookService;
 
 public class GetBookByIdCommand extends AbstractCommand<Book> {
 
-    private Integer bookId;
+    private Long bookId;
 
-    public GetBookByIdCommand(BookService bookService, Integer bookId) {
+    public GetBookByIdCommand(BookService bookService, Long bookId) {
         super(bookService);
         this.bookId = bookId;
     }
