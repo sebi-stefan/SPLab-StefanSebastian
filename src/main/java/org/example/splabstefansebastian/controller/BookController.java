@@ -11,6 +11,8 @@ import org.example.splabstefansebastian.service.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import java.util.List;
 
@@ -66,6 +68,13 @@ public class BookController {
         Command<Void> deleteBookCommand = new DeleteBookCommand(bookService, bookId);
         syncExecutor.executeCommand(deleteBookCommand);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @RequestMapping("/books-sse")
+    public ResponseBodyEmitter getBooksSse(){
+        final SseEmitter emitter = new SseEmitter(0L);
+        allBooksSubject.attach(new SseObserver(emitter));
+        return emitter;
     }
 
 }
