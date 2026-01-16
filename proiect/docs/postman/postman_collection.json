@@ -1,0 +1,590 @@
+{
+	"info": {
+		"_postman_id": "43c38b53-d039-4063-990d-f32e47484593",
+		"name": "TW_CMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40455448"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"userexample.com\",\n  \"password\": \"str\",\n  \"firstName\": \"\",\n  \"lastName\": \"string\",\n  \"bio\": \"string\",\n  \"organization\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/user",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"\",\n  \"lastName\": \"string\",\n  \"bio\": \"string\",\n  \"organization\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/user/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/user",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/user/current",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"user",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/user/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conference",
+			"item": [
+				{
+					"name": "Create conference",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"venueName\": \"string\",\n  \"venueAddress\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"startDate\": \"2025-12-06\",\n  \"endDate\": \"2025-12-07\",\n  \"maxAttendees\": 0,\n  \"registrationDeadline\": \"2025-12-03\",\n  \"websiteUrl\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/conference",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update conference",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"string2342\",\n  \"description\": \"string\",\n  \"venueName\": \"string\",\n  \"venueAddress\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"startDate\": \"2025-12-06\",\n  \"endDate\": \"2025-12-07\",\n  \"maxAttendees\": 0,\n  \"registrationDeadline\": \"2025-12-03\",\n  \"websiteUrl\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/conference/7",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all conferences",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/conference",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get conference by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"venueName\": \"string\",\n  \"venueAddress\": \"string\",\n  \"city\": \"string\",\n  \"country\": \"string\",\n  \"startDate\": \"2025-12-06\",\n  \"endDate\": \"2025-12-07\",\n  \"maxAttendees\": 0,\n  \"registrationDeadline\": \"2025-12-08\",\n  \"websiteUrl\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/conference/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get conferences by user id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/conference/user/6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference",
+								"user",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get conference by current user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/conference/currentUser",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference",
+								"currentUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete conference by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/conference/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"conference",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "Create session",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"sessionType\": \"KEYNOTE\",\n  \"room\": \"string\",\n  \"startTime\": \"2025-12-07T16:49:56.131Z\",\n  \"endTime\": \"2025-12-08T16:49:56.131Z\",\n  \"maxParticipants\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/session/create/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"session",
+								"create",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update session",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"sessionType\": \"KEYNOTE\",\n  \"room\": \"string\",\n  \"startTime\": \"2025-12-07T16:49:56.131Z\",\n  \"endTime\": \"2025-12-08T16:49:56.131Z\",\n  \"maxParticipants\": 13\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/session/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"session",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get sessions by conference id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/session/conference/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"session",
+								"conference",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete session by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "organizer@cms.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "cmspass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/session/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"session",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

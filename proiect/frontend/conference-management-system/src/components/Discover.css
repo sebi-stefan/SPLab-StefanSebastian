@@ -1,0 +1,146 @@
+.discover {
+    padding: 2.5rem 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.discover__header {
+    margin-bottom: 2rem;
+}
+
+.discover__title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: hsl(210 50% 20%);
+    margin: 0 0 0.5rem 0;
+}
+
+.discover__subtitle {
+    color: hsl(210 20% 45%);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.discover__search {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.discover__search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: hsl(210 20% 45%);
+}
+
+.discover__search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border-radius: 0.75rem;
+    border: 1px solid hsl(210 30% 85%);
+    background-color: hsl(0 0% 100%);
+    color: hsl(210 50% 20%);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.discover__search-input::placeholder {
+    color: hsl(210 20% 45%);
+}
+
+.discover__search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(22 100% 62%);
+}
+
+.discover__filters {
+    margin-bottom: 2rem;
+}
+
+.discover__filters-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: hsl(210 20% 45%);
+    margin: 0 0 0.75rem 0;
+}
+
+.discover__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.discover__tag {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(210 30% 90%);
+    color: hsl(210 20% 45%);
+}
+
+.discover__tag:hover {
+    background-color: hsl(210 30% 85%);
+}
+
+.discover__tag--active {
+    background: linear-gradient(135deg, hsl(22 100% 62%) 0%, hsl(22 100% 55%) 100%);
+    color: hsl(0 0% 100%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.discover__tag--clear {
+    background-color: hsla(0 84% 60% / 0.1);
+    color: hsl(0 84% 60%);
+}
+
+.discover__tag--clear:hover {
+    background-color: hsla(0 84% 60% / 0.2);
+}
+
+.discover__results-count {
+    font-size: 0.875rem;
+    color: hsl(210 20% 45%);
+    margin: 0 0 1.5rem 0;
+}
+
+.discover__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .discover__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .discover__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.discover__empty {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.discover__empty-title {
+    font-size: 1.25rem;
+    color: hsl(210 20% 45%);
+    margin: 0 0 0.5rem 0;
+}
+
+.discover__empty-text {
+    font-size: 0.875rem;
+    color: hsl(210 20% 45%);
+    margin: 0;
+}

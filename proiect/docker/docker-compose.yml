@@ -1,0 +1,45 @@
+services:
+  cms-backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile_backend
+    container_name: cms-backend
+    network_mode: host
+    restart: unless-stopped
+
+  cms-frontend:
+    build:
+      context: ../frontend/conference-management-system
+      dockerfile: ../../docker/Dockerfile_frontend
+    container_name: cms-frontend
+    network_mode: host
+    depends_on:
+      - cms-backend
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17
+    container_name: cms-db
+    network_mode: host
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cms_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    network_mode: host
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+
+volumes:
+  postgres_data:
+  minio_data:

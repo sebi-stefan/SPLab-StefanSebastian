@@ -1,0 +1,47 @@
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 32px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btnLogin {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+.btnLogin:hover {
+    background-color: #1d4ed8;
+}
+
+.btnSignup {
+    background-color: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    text-decoration: none;
+}
+
+.btnSignup:hover {
+    background-color: #eff6ff;
+}

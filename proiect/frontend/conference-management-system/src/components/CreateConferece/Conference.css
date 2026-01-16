@@ -1,0 +1,100 @@
+.conference-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    /*padding: 5px 5px;*/
+    min-height: auto;
+}
+
+.create-conf-box
+{
+    background: #d6dff3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    min-height: 70%;
+    max-width: 650px;
+    text-align: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+
+.create-conference-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 80%;
+}
+
+.btn-save-new-conference {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    flex: 1;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    background: linear-gradient(135deg, hsl(22 100% 62%) 0%, hsl(22 100% 55%) 100%);
+    color: hsl(0 0% 100%);
+}
+
+.pair {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 0.5rem;
+}
+
+.create-session-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 80%;
+}
+
+.create-session-box {
+    background: #e7eae9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    /*width: 100%;*/
+    /*min-height: 70%;*/
+    max-width: 650px;
+    text-align: center;
+}
+
+.btns-session {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.session-error {
+    color: #c00;
+    padding: 2px;
+    animation: pulse 1s ease-in-out;
+    height: 30px;
+}
+
+.session-error.shake {
+    animation: pulse 0.5s ease-in-out, shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+
+
+
+

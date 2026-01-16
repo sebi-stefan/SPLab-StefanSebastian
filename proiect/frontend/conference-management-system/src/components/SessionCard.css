@@ -1,0 +1,97 @@
+.session-card {
+    background-color: hsl(0 0% 100%);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid hsl(210 30% 85%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.session-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.session-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.session-card__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: hsl(210 50% 20%);
+    line-height: 1.4;
+    margin: 0;
+    flex: 1;
+}
+
+.session-card__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.session-card__btn {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.session-card__btn--edit {
+    background-color: hsl(210 55% 25%);
+    color: hsl(0 0% 100%);
+}
+
+.session-card__btn--edit:hover {
+    background-color: hsl(210 55% 20%);
+}
+
+.session-card__btn--delete {
+    background-color: hsl(0 84% 60%);
+    color: hsl(0 0% 100%);
+}
+
+.session-card__btn--delete:hover {
+    background-color: hsl(0 84% 55%);
+}
+
+.session-card__description {
+    font-size: 0.875rem;
+    color: hsl(210 20% 45%);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.session-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.session-card__info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(210 20% 45%);
+}
+
+.session-card__info-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: hsl(210 70% 55%);
+    flex-shrink: 0;
+}
+
+.session-card__info-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
